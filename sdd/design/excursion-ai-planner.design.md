@@ -1,23 +1,51 @@
-# Excursion Ai Planner Design
+Excursion Ai Planner Design
 
-## Scope
+Scope
 
-Initial baseline UI reset and title-only landing page.
+- Baseline UI: title-only landing page, then interactive map with side panel.
 
-## Decisions
+- Minimal, modular, and extensible design for future features.
 
-- Use existing Nuxt page and layout system.
-- Keep `home` and `default` layouts as plain wrappers with no visual styling.
-- Render title directly in `pages/index.vue`.
+Decisions
 
-## File Mapping
+- Use Nuxt page and layout system.
 
-- `pages/index.vue` - landing page content.
-- `layouts/home.vue` - home page wrapper.
-- `layouts/default.vue` - fallback wrapper.
+- Use Quasar UI library for all components and layout.
 
-## Future Extension Points
+- Map occupies main area; side panel (QDrawer) on the left with two tabs: Info and Chat.
 
-- Add reusable UI components under `components/` when features are introduced.
-- Introduce styling strategy only after feature specs define UI behavior.
+- Search field at the top of the map, similar to Google Maps.
 
+- Route management and export features accessible from the side panel.
+
+- Notes and photo upload available in location info tab.
+
+File Mapping
+
+- pages/index.vue - landing page and main app entry.
+
+- layouts/home.vue - home page wrapper.
+
+- layouts/default.vue - fallback wrapper.
+
+- components/MapView.vue - main map component.
+
+- components/SidePanel.vue - left panel with tabs.
+
+- components/LocationInfo.vue - info tab content.
+
+- components/LocationChat.vue - chat tab content.
+
+- components/RouteManager.vue - route management UI.
+
+- components/NotesUploader.vue - notes and photo upload.
+
+Future Extension Points
+
+- Add more data sources for location info (e.g., Wikipedia, Wikidata).
+
+- Enhance AI chat with context-aware prompts.
+
+- Add user authentication for saving personal routes.
+
+- Introduce advanced styling and theming after feature specs define UI behavior.

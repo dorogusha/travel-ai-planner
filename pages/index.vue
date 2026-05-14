@@ -1,5 +1,9 @@
 <template>
-  <GoogleMapDisplay />
+  <ClientOnly>
+    <LocationSidePanel>
+      <GoogleMapDisplay />
+    </LocationSidePanel>
+  </ClientOnly>
 </template>
 
 <script setup lang="ts">

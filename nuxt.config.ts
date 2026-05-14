@@ -30,6 +30,11 @@ export default defineNuxtConfig({
   modules: [
     '@pinia/nuxt',
     '@nuxt/ui',
-    '@nuxt/eslint'
-  ]
+    '@nuxt/eslint',
+    'nuxt-quasar-ui'
+  ],
+  quasar: {
+    iconSet: 'material-icons',
+    autoIncludeIconSet: true
+  }
 })
